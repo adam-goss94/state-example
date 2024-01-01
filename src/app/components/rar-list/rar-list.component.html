@@ -1,1 +1,17 @@
-<p>rar-list works!</p>
+<div class="container">
+  <div *ngFor="let boss of bosses" class="boss-row">
+    <div>
+      <div class="boss-row-image">
+        <img
+          src="../../../assets/images/bosses/{{
+            boss.name.toLowerCase().replace(' ', '_')
+          }}.png"
+          alt=""
+        />
+      </div>
+      <h2>{{ boss.name }}</h2>
+    </div>
+    <div *ngFor="let legendaryDrop of boss.legendaryDrops" class="boss-row-item">
+        <h3>{{ legendaryDrop.name }}</h3>
+      </div>
+</div>

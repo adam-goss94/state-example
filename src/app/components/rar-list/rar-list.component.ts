@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Boss } from 'src/app/models/monsters/monsters.interface';
+import { MonstersService } from 'src/app/services/monsters/monsters.service';
 
 @Component({
   selector: 'app-rar-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RarListComponent implements OnInit {
 
-  constructor() { }
+  public bosses: Boss[] = [];
+
+  constructor(private bossService: MonstersService) {}
 
   ngOnInit(): void {
+    this.bossService.getBosses().subscribe((bosses) => {
+      this.bosses = bosses;
+      console.log(this.bosses)
+    });
+
+    
   }
 
 }
