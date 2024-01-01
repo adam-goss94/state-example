@@ -16,7 +16,6 @@ export class RarListComponent implements OnInit {
   ngOnInit(): void {
     this.bossService.getBosses().subscribe((bosses) => {
       this.bosses = bosses;
-      console.log(this.bosses)
     });
 
     

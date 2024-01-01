@@ -1,0 +1,24 @@
+<div class="containter">
+  <div class="stars">
+    <span>-</span>
+    <div>
+      <img src="../../../../assets/images/rars/star_brown.png" alt="" />
+    </div>
+    <span>+</span>
+    <span class="comparison-button" (click)="addToComparison()">P</span>
+  </div>
+  <h3>"{{ itemList.name }}"</h3>
+  <div class="images">
+    <img src="../../../../assets/images/rars/admiralski_gronostaj.png" alt="" />
+    <div class="drif-slots">
+      <img src="../../../../assets/images/rars/driff_slot.png" alt="" />
+    </div>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let key of filteredOrder">
+        <span>{{ key }}: </span><span>{{ itemList[key] }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

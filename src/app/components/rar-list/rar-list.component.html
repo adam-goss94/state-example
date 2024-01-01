@@ -11,11 +11,11 @@
       </div>
       <h2>{{ boss.name }}</h2>
     </div>
-    <div
-      *ngFor="let legendaryDrop of boss.legendaryDrops"
-      class="boss-row-items"
-    >
-      <h3>{{ legendaryDrop.name }}</h3>
+    <div class="boss-row-items">
+      <app-list-item
+        *ngFor="let legendaryDrop of boss.legendaryDrops"
+        [itemList]="legendaryDrop"
+      ></app-list-item>
     </div>
   </div>
 </div>

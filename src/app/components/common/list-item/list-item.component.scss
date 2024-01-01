@@ -1,0 +1,44 @@
+.containter {
+    width: 220px;
+}
+h3 {
+    text-align: center;
+    color: #0cf;
+    font: 400 16px/28px Roboto,Helvetica Neue,sans-serif;
+    margin: 0;
+
+}
+
+ul {
+    font-size: 14px;
+    color: white;
+
+    li {
+        padding-bottom: 3px;
+    }
+}
+
+.stars {
+    color: white;
+    font-size: 36px;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+
+    .drif-slots{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.comparison-button {
+    font-size: 20px;
+    cursor: pointer;
+}
